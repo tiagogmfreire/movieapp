@@ -30,7 +30,7 @@ export default {
     }
   },
   mounted () {
-    this.$store.dispatch('movies/details', { route: this.$route.params.id })
+    this.$store.dispatch('movies/details', this.$route.params.id)
   }
 }
 

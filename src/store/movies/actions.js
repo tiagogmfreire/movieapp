@@ -18,7 +18,7 @@ export function upcoming (state) {
 }
 
 export function details (state, id) {
-  axios('http://localhost/movie/' + id.route, {
+  axios('http://localhost/movie/' + id, {
     method: 'GET',
     mode: 'no-cors',
     headers: {
