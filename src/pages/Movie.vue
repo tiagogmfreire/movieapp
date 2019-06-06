@@ -9,10 +9,6 @@
           <div class="text-subtitle2">{{movie.release_date}}</div>
           <div class="text-subtitle3" v-for="(genre,j) in movie.genres" v-bind:key="`${j}-${genre}`">{{genre.name}}</div>
         </q-card-section>
-
-        <q-card-actions>
-          <q-btn flat clickable :to="`/movie/${movie.id}`">See more...</q-btn>
-        </q-card-actions>
       </q-card>
     </div>
   </q-page>

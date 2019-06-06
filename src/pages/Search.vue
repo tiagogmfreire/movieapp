@@ -6,7 +6,6 @@
         debounce="500"
         filled
         placeholder="Search"
-        hint="Debouncing 500ms"
         @input="searchMovie"
       >
         <template v-slot:append>
