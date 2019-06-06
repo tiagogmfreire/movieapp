@@ -32,6 +32,21 @@ export function details (state, id) {
     .catch(function (response) {
       // console.log(response)
     })
+}
 
 export function search (state, title) {
+  axios('http://localhost/movie/upcoming', {
+    method: 'GET',
+    mode: 'no-cors',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(function (response) {
+      state.commit('setMovieDetails', response.data)
+    })
+    .catch(function (response) {
+      // console.log(response)
+    })
 }
