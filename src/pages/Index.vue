@@ -33,22 +33,4 @@ export default {
     this.$store.dispatch('movies/upcoming')
   }
 }
-
-import axios from 'axios'
-
-axios('http://localhost/movie/upcoming', {
-  method: 'GET',
-  mode: 'no-cors',
-  headers: {
-    'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json'
-  }
-})
-  .then(function (response) {
-    // console.log(response)
-  })
-  .catch(function (response) {
-    // console.log(response)
-  })
-
 </script>
