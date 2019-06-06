@@ -10,9 +10,9 @@
           <div class="text-subtitle3" v-for="genre in movie.genres" v-bind:key="genre">{{genre.name}}</div>
         </q-card-section>
 
-        <q-card-section>
-          {{ lorem }}
-        </q-card-section>
+        <q-card-actions>
+          <q-btn flat clickable to="/movie">See more...</q-btn>
+        </q-card-actions>
       </q-card>
     </div>
   </q-page>
