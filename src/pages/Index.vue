@@ -2,6 +2,7 @@
   <q-page class="flex flex-center">
     <img alt="Quasar logo" src="~assets/quasar-logo-full.svg">
     index
+    {{movies}}
   </q-page>
 </template>
 
@@ -10,7 +11,16 @@
 
 <script>
 export default {
-  name: 'PageIndex'
+  name: 'PageIndex',
+  computed: {
+    movies () {
+      return this.$store.state.movies.movies
+    }
+  },
+  mounted () {
+    this.$store.dispatch('movies/upcoming')
+    console.log('movies', this.$store.state.movies.movies)
+  }
 }
 
 import axios from 'axios'
@@ -24,10 +34,10 @@ axios('http://localhost/movie/upcoming', {
   }
 })
   .then(function (response) {
-    console.log(response)
+    // console.log(response)
   })
   .catch(function (response) {
-    console.log(response)
+    // console.log(response)
   })
 
 </script>
