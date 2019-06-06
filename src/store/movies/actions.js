@@ -18,7 +18,6 @@ export function upcoming (state) {
 }
 
 export function details (state, id) {
-  console.log('id', id)
   axios('http://localhost/movie/' + id.route, {
     method: 'GET',
     mode: 'no-cors',
@@ -34,5 +33,5 @@ export function details (state, id) {
       // console.log(response)
     })
 
-  console.log('movie/id', id)
+export function search (state, title) {
 }
