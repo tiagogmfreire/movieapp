@@ -7,6 +7,7 @@
         <q-card-section>
           <div class="text-h6">{{movie.title}}</div>
           <div class="text-subtitle2">{{movie.release_date}}</div>
+          <div class="text-subtitle3" v-for="genre in movie.genres" v-bind:key="genre">{{genre.name}}</div>
         </q-card-section>
 
         <q-card-section>
