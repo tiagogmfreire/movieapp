@@ -15,7 +15,7 @@
     </div>
     <div class="q-pa-md row items-start q-gutter-md">
       <q-card class="my-card" v-for="(movie, i) in results" v-bind:key="`${i}-${movie}`">
-        <img v-bind:src="movie.poster_path"  >
+        <img v-bind:src="movie.poster_path" witdh="300" height="450">
 
         <q-card-section>
           <div class="text-h6">{{movie.title}}</div>
