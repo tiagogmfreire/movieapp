@@ -24,9 +24,9 @@ axios('http://localhost/movie/search?title=avengers', {
   }
 })
   .then(function (response) {
-    console.log(response)
+    // console.log(response)
   })
   .catch(function (response) {
-    console.log(response)
+    // console.log(response)
   })
 </script>

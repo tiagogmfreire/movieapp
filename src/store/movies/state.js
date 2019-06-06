@@ -1,3 +1,5 @@
 export default {
-  movies: []
+  movies: [],
+  results: [],
+  movie: []
 }

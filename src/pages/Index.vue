@@ -31,7 +31,6 @@ export default {
   },
   mounted () {
     this.$store.dispatch('movies/upcoming')
-    console.log('movies', this.$store.state.movies.movies)
   }
 }
 
