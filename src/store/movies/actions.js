@@ -35,7 +35,8 @@ export function details (state, id) {
 }
 
 export function search (state, title) {
-  axios('http://localhost/movie/upcoming', {
+  console.log(title)
+  axios('http://localhost/movie/search?title=' + title, {
     method: 'GET',
     mode: 'no-cors',
     headers: {
@@ -44,7 +45,7 @@ export function search (state, title) {
     }
   })
     .then(function (response) {
-      state.commit('setMovieDetails', response.data)
+      state.commit('setMovieResults', response.data)
     })
     .catch(function (response) {
       // console.log(response)

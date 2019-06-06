@@ -15,7 +15,7 @@
       </q-input>
     </div>
     <div class="q-pa-md row items-start q-gutter-md">
-      <q-card class="my-card" v-for="(movie, i) in movies" v-bind:key="`${i}-${movie}`">
+      <q-card class="my-card" v-for="(movie, i) in results" v-bind:key="`${i}-${movie}`">
         <img v-bind:src="movie.poster_path"  >
 
         <q-card-section>
@@ -39,12 +39,12 @@
 export default {
   name: 'PageIndex',
   computed: {
-    movies () {
-      return this.$store.state.movies.movies
+    results () {
+      return this.$store.state.movies.results
     }
   },
   mounted () {
-    this.$store.dispatch('movies/upcoming')
+    // this.$store.dispatch('movies/upcoming')
   },
   data () {
     return {
@@ -54,6 +54,7 @@ export default {
   methods: {
     searchMovie (e) {
       console.log(e)
+      this.$store.dispatch('movies/search', e)
     }
   }
 }
