@@ -11,7 +11,7 @@
         </q-card-section>
 
         <q-card-actions>
-          <q-btn flat clickable to="/movie">See more...</q-btn>
+          <q-btn flat clickable :to="`/movie/${movie.id}`">See more...</q-btn>
         </q-card-actions>
       </q-card>
     </div>
