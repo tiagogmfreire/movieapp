@@ -1,8 +1,19 @@
 <template>
   <q-page class="flex flex-center">
-    <img alt="Quasar logo" src="~assets/quasar-logo-full.svg">
-    index
-    {{movies}}
+    <div class="q-pa-md row items-start q-gutter-md">
+      <q-card class="my-card" v-for="movie in movies" v-bind:key="movie">
+        <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+        <q-card-section>
+          <div class="text-h6">{{movie.title}}</div>
+          <div class="text-subtitle2">{{movie.release_date}}</div>
+        </q-card-section>
+
+        <q-card-section>
+          {{ lorem }}
+        </q-card-section>
+      </q-card>
+    </div>
   </q-page>
 </template>
 
