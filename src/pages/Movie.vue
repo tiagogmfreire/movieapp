@@ -1,7 +1,7 @@
 <template>
   <q-page class="flex flex-center">
     <div class="q-pa-md row items-start q-gutter-md">
-      <q-card class="my-card" v-for="(movie, i) in movies" v-bind:key="`${i}-${movie}`">
+      <q-card class="my-card">
         <img v-bind:src="movie.poster_path"  >
 
         <q-card-section>
@@ -25,8 +25,8 @@
 export default {
   name: 'PageIndex',
   computed: {
-    movies () {
-      return this.$store.state.movies.movies
+    movie () {
+      return this.$store.state.movies.movie
     }
   },
   mounted () {
