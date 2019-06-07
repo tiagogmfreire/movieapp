@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export function upcoming (state) {
-  axios('http://localhost/movie/upcoming', {
+  axios(process.env.API + '/movie/upcoming', {
     method: 'GET',
     mode: 'no-cors',
     headers: {
@@ -18,7 +18,7 @@ export function upcoming (state) {
 }
 
 export function details (state, id) {
-  axios('http://localhost/movie/' + id, {
+  axios(process.env.API + '/movie/' + id, {
     method: 'GET',
     mode: 'no-cors',
     headers: {
@@ -36,7 +36,7 @@ export function details (state, id) {
 
 export function search (state, title) {
   console.log(title)
-  axios('http://localhost/movie/search?title=' + title, {
+  axios(process.env.API + '/movie/search?title=' + title, {
     method: 'GET',
     mode: 'no-cors',
     headers: {

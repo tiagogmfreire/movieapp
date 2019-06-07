@@ -62,6 +62,13 @@ module.exports = function (ctx) {
     supportIE: false,
 
     build: {
+      env: ctx.dev
+      ? { // so on dev we'll have
+        API: JSON.stringify('http://localhost')
+      }
+      : { // and on build (production):
+        API: JSON.stringify('http://ec2-18-228-22-229.sa-east-1.compute.amazonaws.com')
+      },
       scopeHoisting: true,
       // vueRouterMode: 'history',
       // vueCompiler: true,
