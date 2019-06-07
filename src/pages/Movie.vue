@@ -1,15 +1,32 @@
 <template>
   <q-page class="flex flex-center">
-    <div class="q-pa-md row items-start q-gutter-md">
-      <q-card class="my-card">
-        <img v-bind:src="movie.poster_path"  >
+    <div class="q-pa-md">
+      <div class="row">
+        <div class="col">
+          <h4>{{movie.title}}</h4>
+        </div>
+      </div>
 
-        <q-card-section>
-          <div class="text-h6">{{movie.title}}</div>
-          <div class="text-subtitle2">{{movie.release_date}}</div>
+      <div class="row">
+        <div class="col">
+          <img v-bind:src="movie.poster_path" witdh="300" height="450" >
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <strong>Overview:</strong><br/>
+          {{movie.overview}}
+        </div>
+        <div class="col">
+          <strong>Genre:</strong><br/>
           <div class="text-subtitle3" v-for="(genre,j) in movie.genres" v-bind:key="`${j}-${genre}`">{{genre.name}}</div>
-        </q-card-section>
-      </q-card>
+        </div>
+        <div class="col">
+          <strong>Release date:</strong><br/>
+          {{movie.release_date}}
+        </div>
+      </div>
     </div>
   </q-page>
 </template>
