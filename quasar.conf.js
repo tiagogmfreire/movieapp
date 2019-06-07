@@ -67,7 +67,7 @@ module.exports = function (ctx) {
         API: JSON.stringify('http://localhost')
       }
       : { // and on build (production):
-        API: JSON.stringify('http://ec2-18-228-22-229.sa-east-1.compute.amazonaws.com')
+        API: JSON.stringify('https://movies.tiagofreire.dev/')
       },
       scopeHoisting: true,
       // vueRouterMode: 'history',
