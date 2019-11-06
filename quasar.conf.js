@@ -38,7 +38,12 @@ module.exports = function (ctx) {
         'QList',
         'QItem',
         'QItemSection',
-        'QItemLabel'
+        'QItemLabel',
+
+        'QCard',
+        'QCardSection',
+        'QCardActions',
+        'QInput'
       ],
 
       directives: [
@@ -57,6 +62,13 @@ module.exports = function (ctx) {
     supportIE: false,
 
     build: {
+      env: ctx.dev
+      ? { // so on dev we'll have
+        API: JSON.stringify('http://localhost')
+      }
+      : { // and on build (production):
+        API: JSON.stringify('https://movies.tiagofreire.dev/')
+      },
       scopeHoisting: true,
       // vueRouterMode: 'history',
       // vueCompiler: true,
