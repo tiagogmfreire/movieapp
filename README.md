@@ -32,3 +32,18 @@ At the moment the API contains the data of 100 upcoming movies.
 Only these movies are shown in the upcoming list, search and movie details sections of the frontend app.
 
 For more information about the architecture please check the read-me file of the backend project.
+
+## Installation
+
+0. Install Node and NPM
+1. [Install Quasar](https://quasar.dev/quasar-cli/installation)
+2. run ```npm install```
+3. [run app in pwa mode](https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa): ```quasar dev -m pwa```
+
+## Upgrading Quasar
+
+According to the [oficial documentation](https://quasar.dev/start/upgrade-guide), run:
+```
+quasar upgrade
+quasar upgrade --install
+```
